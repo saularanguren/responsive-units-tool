@@ -21,30 +21,16 @@ int validating_format(char *string, int converter)
 {
     regex_t regex;
 
-    int return_value;
+    char *expressions[] = {
+        GENERAL_REGULAR_EXPRESSION,
+        PX_REGULAR_EXPRESSION,
+        REM_REGULAR_EXPRESSION
+    };
 
-    if(converter == 0)
-    {
-        return_value = regcomp(&regex, GENERAL_REGULAR_EXPRESSION, REG_EXTENDED | REG_ICASE);
-    }
-
-    if(converter == 1)
-    {
-        return_value = regcomp(&regex, PX_REGULAR_EXPRESSION, REG_EXTENDED | REG_ICASE);
-    }
-
-    if(converter == 2)
-    {
-        return_value = regcomp(&regex, REM_REGULAR_EXPRESSION, REG_EXTENDED | REG_ICASE);
-    }
+    int return_value = regcomp(&regex, expressions[converter], REG_EXTENDED | REG_ICASE);
 
     return_value = regexec(&regex, string, 0, NULL, 0);
-
-    if(return_value == REG_NOMATCH)
-    {
-        return 1;
-    }
-
     regfree(&regex);
-    return 0;
+
+    return (return_value == REG_NOMATCH) ? 1 : 0;
 }
