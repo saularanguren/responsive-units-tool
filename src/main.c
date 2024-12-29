@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-#include "lib/copy.h"
-#include "lib/print.h"
-#include "lib/format.h"
-#include "lib/converters.h"
+#include "../lib/messages.h"
+#include "../lib/clipboard.h"
+#include "../lib/validations.h"
+#include "../lib/conversions.h"
 
 int main()
 {

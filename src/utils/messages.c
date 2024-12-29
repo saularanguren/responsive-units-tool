@@ -1,5 +1,5 @@
-#include "../lib/print.h"
-#include "../lib/constants.h"
+#include "../../lib/messages.h"
+#include "../constants/constants.h"
 
 /**
  * @param noun Must be "Welcome, " or an empty string ""

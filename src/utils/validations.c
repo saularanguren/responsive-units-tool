@@ -1,5 +1,5 @@
-#include "../lib/format.h"
-#include "../lib/constants.h"
+#include "../../lib/validations.h"
+#include "../constants/constants.h"
 
 void check_decimal_separator(char *string)
 {

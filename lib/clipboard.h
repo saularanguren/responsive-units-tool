@@ -1,5 +1,5 @@
-#ifndef COPY_H
-#define COPY_H
+#ifndef CLIPBOARD_H
+#define CLIPBOARD_H
 
 #include <stdio.h>
 #include <stdlib.h>

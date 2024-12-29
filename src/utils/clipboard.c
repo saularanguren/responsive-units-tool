@@ -1,4 +1,4 @@
-#include "../lib/copy.h"
+#include "../../lib/clipboard.h"
 
 /**
  * @param result Must be the final value

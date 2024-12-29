@@ -9,7 +9,7 @@ TARGET = responsive-units-tool
 CFLAGS = -g -Wall
 
 # address of .c files
-SRC = main.c src/converters.c src/copy.c src/format.c src/print.c
+SRC = src/*.c src/utils/*.c
 
 # Create the executable inside the build folder, run it and delete it
 # the previous executable, if it exists in that folder
